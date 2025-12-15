@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <h1 class="logo">YourName</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <h2>Designer & Developer</h2>
+    <p>I create elegant, modern digital experiences.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section fade-in">
+    <h3>About Me</h3>
+    <p>
+      Write a short introduction about yourself here.
+      Your background, passion, and what you love to create.
+    </p>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section fade-in">
+    <h3>Selected Work</h3>
+
+    <div class="projects">
+      <div class="project">
+        <img src="images/project1.jpg" alt="Project 1">
+        <h4>Project One</h4>
+        <p>Short description of the project.</p>
+      </div>
+
+      <div class="project">
+        <img src="images/project2.jpg" alt="Project 2">
+        <h4>Project Two</h4>
+        <p>Short description of the project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section fade-in">
+    <h3>Contact</h3>
+    <p>email@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
