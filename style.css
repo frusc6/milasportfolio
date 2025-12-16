@@ -74,6 +74,37 @@ header a:hover {
   margin: 0 auto 60px;
 }
 
+
+/* EXPERIENCE */
+.experience-list {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.experience-item {
+  margin-bottom: 50px;
+}
+
+.experience-item h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.experience-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.experience-item p {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+
 /* PROJECTS */
 .projects {
   display: grid;
@@ -279,3 +310,4 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
