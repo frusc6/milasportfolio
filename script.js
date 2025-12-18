@@ -34,26 +34,24 @@ modal.addEventListener("click", (e) => {
 });
 
 
-// Header becomes black after the green area is out of sight
+// =========================
+// 3️⃣ Header color change with offset
+// =========================
 const header = document.querySelector("header");
-const greenSection = document.querySelector(".green-section"); // <- this is your hero section now
+const greenSection = document.querySelector(".green-section"); // hero section
+const offset = 100; // adjust this to make nav turn black earlier
 
 if (greenSection) {
-  const greenBottom = greenSection.offsetTop + greenSection.offsetHeight;
-  const offset = 60; // adjust this number to make the nav turn black earlier
-
   window.addEventListener("scroll", () => {
-    if (window.scrollY >= greenBottom) {
-      // Scrolled past green section → make header black
+    const greenTop = greenSection.getBoundingClientRect().top;
+
+    if (greenTop <= -offset) {
       header.classList.add("scrolled");
     } else {
-      // Still over green section → transparent header
       header.classList.remove("scrolled");
     }
   });
 }
-
-
 
 
 
