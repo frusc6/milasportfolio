@@ -34,13 +34,24 @@ modal.addEventListener("click", (e) => {
 });
 
 
+// Replace the old header scroll block with this:
 const header = document.querySelector("header");
+const greenSection = document.querySelector(".green-section"); // <- your green area
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
+if (greenSection) {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        // green area is out of view → make header black
+        header.classList.add("scrolled");
+      } else {
+        // green area is in view → transparent header
+        header.classList.remove("scrolled");
+      }
+    },
+    { threshold: 0 } // triggers as soon as any part of green section leaves viewport
+  );
+
+  observer.observe(greenSection);
+}
 
