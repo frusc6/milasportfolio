@@ -379,7 +379,7 @@ header a:hover {
   left: 0;
   width: 100%;
   height: 140px;
-  background: rgba(217, 238, 235, 0.6);
+  background: rgba(106, 120, 148, 0.9);
   filter: blur(30px);
   z-index: 0;
   pointer-events: none;
@@ -403,6 +403,7 @@ header.scrolled h1,
 header.scrolled a {
   color: #ffffff;
 }
+
 
 
 
