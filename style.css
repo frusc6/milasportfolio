@@ -334,7 +334,7 @@ footer {
   left: 0;
   width: 100%;
   height: 45%;
-  background: #cfe7e4;
+  background: #677c9e;
   z-index: 0;
 }
 
@@ -403,5 +403,6 @@ header.scrolled h1,
 header.scrolled a {
   color: #ffffff;
 }
+
 
 
