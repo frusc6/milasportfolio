@@ -16,6 +16,7 @@ body {
 
 /* HEADER */
 header {
+  font-family: 'Playfair Display', serif;
   position: fixed;
   top: 0;
   width: 100%;
@@ -403,6 +404,7 @@ header.scrolled h1,
 header.scrolled a {
   color: #ffffff;
 }
+
 
 
 
