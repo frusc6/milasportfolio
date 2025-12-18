@@ -42,15 +42,35 @@ header {
 
 
 header a {
+  position: relative; /* needed for the underline */
   margin-left: 20px;
   color: #aaa;
   text-decoration: none;
+  font-family: 'Inter', sans-serif;
   transition: color 0.3s;
+}
+
+/* Underline animation */
+header a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* distance from text */
+  width: 0%;
+  height: 2px; /* thickness of underline */
+  background-color: #fff; /* underline color */
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+header a:hover::after {
+  width: 100%;
 }
 
 header a:hover {
   color: #fff;
 }
+
 
 /* HERO */
 .hero {
@@ -404,3 +424,4 @@ header.scrolled h1,
 header.scrolled a {
   color: #ffffff;
 }
+
