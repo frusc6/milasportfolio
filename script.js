@@ -40,7 +40,7 @@ const greenSection = document.querySelector(".green-section"); // <- this is you
 
 if (greenSection) {
   const greenBottom = greenSection.offsetTop + greenSection.offsetHeight;
-  const offset = 100; // adjust this number to make the nav turn black earlier
+  const offset = 60; // adjust this number to make the nav turn black earlier
 
   window.addEventListener("scroll", () => {
     if (window.scrollY >= greenBottom) {
@@ -52,6 +52,7 @@ if (greenSection) {
     }
   });
 }
+
 
 
 
