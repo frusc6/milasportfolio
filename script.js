@@ -39,7 +39,7 @@ modal.addEventListener("click", (e) => {
 // =========================
 const header = document.querySelector("header");
 const greenSection = document.querySelector(".green-section"); // hero section
-const offset = 140; // adjust this to make nav turn black earlier
+const offset = 180; // adjust this to make nav turn black earlier
 
 if (greenSection) {
   window.addEventListener("scroll", () => {
@@ -52,6 +52,7 @@ if (greenSection) {
     }
   });
 }
+
 
 
 
