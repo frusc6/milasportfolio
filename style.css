@@ -355,7 +355,7 @@ footer {
   left: 0;
   width: 100%;
   height: 45%;
-  background: #191919cc;
+  background: url("project4.png") center;
   z-index: 0;
 }
 
@@ -424,6 +424,7 @@ header.scrolled h1,
 header.scrolled a {
   color: #ffffff;
 }
+
 
 
 
