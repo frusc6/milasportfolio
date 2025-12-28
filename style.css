@@ -333,7 +333,7 @@ footer {
 
 .work-item img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
   transition:
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
@@ -393,3 +393,4 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
