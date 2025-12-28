@@ -324,26 +324,32 @@ footer {
 
 /* ITEM */
 .work-item {
-  overflow: hidden;
-  border-radius: 18px;
-  cursor: pointer;
   position: relative;
-  height: 200px; /* fixed height for all items */
+  width: 100%;
+  padding-top: 80%;          /* makes the container more square-like (height adjusts to width) */
+  border-radius: 18px;       /* beveled corners */
+  overflow: hidden;          /* ensures children stay inside bevel */
+  cursor: pointer;
 }
 
 .work-item img {
+  position: absolute;        /* fill the container exactly */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 18px; /* add this */
+  border-radius: inherit;    /* match the parent bevel */
+  display: block;
   transition:
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.6s ease;
+  transform-origin: center;
 }
 
 /* HOVER MAGIC */
 .work-item:hover img {
-  transform: scale(1.5);
+   transform: scale(1.2);     /* smaller scale to keep inside corners */
   filter: brightness(1.05);
 }
 
@@ -394,6 +400,7 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
 
 
 
