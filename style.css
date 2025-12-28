@@ -41,7 +41,7 @@ header {
 header h1.logo {
   font-family: 'Pinyon Script', cursive;
   font-weight: 400;
-  font-size: 3.4rem; /* Pinyon looks better slightly larger */
+  font-size: 3.1rem; /* Pinyon looks better slightly larger */
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ header h1.logo {
 /* The Elegant Icon */
 .logo-icon {
   font-family: 'Inter', sans-serif; /* Keep icon font clean */
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #ccf1ff; /* logo color */
   text-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
   margin-top: 8px; /* Adjusts vertical alignment with the slanted text */
@@ -413,6 +413,7 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
 
 
 
