@@ -57,7 +57,7 @@ if (greenSection) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const copyButton = document.getElementById('copy-email');
-    const emailAddress = "yourname@example.com"; // Replace with your actual email
+    const emailAddress = "markovicmiiila@gmail.com"; // Replace with your actual email
 
     copyButton.addEventListener('click', (e) => {
         e.preventDefault(); // Prevents the page from jumping/reloading
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.clipboard.writeText(emailAddress).then(() => {
             // Success! Let's give the user feedback
             const originalText = copyButton.innerText;
-            copyButton.innerText = "Email Copied!";
+            copyButton.innerText = "Email Copied! Thanksies :)";
             copyButton.style.backgroundColor = "#4CAF50"; // Optional: change color to green
 
             // Reset the button after 2 seconds
@@ -80,3 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
