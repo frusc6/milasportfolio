@@ -41,7 +41,7 @@ header {
 header h1.logo {
   font-family: 'Pinyon Script', cursive;
   font-weight: 400;
-  font-size: 4.8rem; /* Pinyon looks better slightly larger */
+  font-size: 3.4rem; /* Pinyon looks better slightly larger */
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -413,6 +413,7 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
 
 
 
