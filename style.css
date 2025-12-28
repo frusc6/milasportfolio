@@ -207,10 +207,9 @@ header.scrolled a {
 }
 
 .project img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+  width: 100%;        /* fills the container horizontally */
+  height: 100%;       /* fills the container vertically */
+  object-fit: cover;  /* crops image to fit container without stretching */
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -394,5 +393,6 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
 
 
