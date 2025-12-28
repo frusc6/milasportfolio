@@ -328,7 +328,7 @@ footer {
   border-radius: 18px;
   cursor: pointer;
   position: relative;
-  height: 250px; /* fixed height for all items */
+  height: 200px; /* fixed height for all items */
 }
 
 .work-item img {
@@ -393,6 +393,7 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
 
 
 
