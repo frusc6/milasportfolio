@@ -52,3 +52,31 @@ if (greenSection) {
     }
   });
 }
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const copyButton = document.getElementById('copy-email');
+    const emailAddress = "yourname@example.com"; // Replace with your actual email
+
+    copyButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevents the page from jumping/reloading
+
+        // Use the Clipboard API
+        navigator.clipboard.writeText(emailAddress).then(() => {
+            // Success! Let's give the user feedback
+            const originalText = copyButton.innerText;
+            copyButton.innerText = "Email Copied!";
+            copyButton.style.backgroundColor = "#4CAF50"; // Optional: change color to green
+
+            // Reset the button after 2 seconds
+            setTimeout(() => {
+                copyButton.innerText = originalText;
+                copyButton.style.backgroundColor = ""; // Resets to original CSS
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            alert("Could not copy email automatically. Please copy it manually: " + emailAddress);
+        });
+    });
+});
