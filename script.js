@@ -56,19 +56,21 @@ if (greenSection) {
 
 
 
+
+  <!-- ================= COPY EMAIL + FADE-IN SCRIPT ================= -->
 <script>
   // COPY EMAIL FUNCTIONALITY
-  document.getElementById('copy-email').addEventListener('click', function(e) {
-    e.preventDefault(); // prevent default link behavior
-    const email = 'your.email@example.com'; // <-- REPLACE with your email
-    navigator.clipboard.writeText(email).then(() => {
-      const btn = document.getElementById('copy-email');
-      const originalText = btn.textContent;
-      btn.textContent = 'Copied!';
-      setTimeout(() => { btn.textContent = originalText; }, 2000);
-    }).catch(() => {
+  const copyBtn = document.getElementById('copy-email');
+  copyBtn.addEventListener('click', async () => {
+    const email = 'frusc6@gmail.com'; // <-- REPLACE with your email
+    try {
+      await navigator.clipboard.writeText(email);
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => copyBtn.textContent = originalText, 2000);
+    } catch {
       alert('Failed to copy email. Please copy manually.');
-    });
+    }
   });
 
   // FADE-IN ON SCROLL
@@ -78,7 +80,7 @@ if (greenSection) {
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('visible');
@@ -86,11 +88,7 @@ if (greenSection) {
     });
   }, appearOptions);
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
-
-
-
+  
 
