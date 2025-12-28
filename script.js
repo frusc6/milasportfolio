@@ -56,6 +56,40 @@ if (greenSection) {
 
 
 
+<script>
+  // COPY EMAIL FUNCTIONALITY
+  document.getElementById('copy-email').addEventListener('click', function(e) {
+    e.preventDefault(); // prevent default link behavior
+    const email = 'your.email@example.com'; // <-- REPLACE with your email
+    navigator.clipboard.writeText(email).then(() => {
+      const btn = document.getElementById('copy-email');
+      const originalText = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = originalText; }, 2000);
+    }).catch(() => {
+      alert('Failed to copy email. Please copy manually.');
+    });
+  });
+
+  // FADE-IN ON SCROLL
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 
 
