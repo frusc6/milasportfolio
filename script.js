@@ -55,7 +55,7 @@ if (greenSection) {
 
 
 
-
+<script>
 
   <!-- ================= COPY EMAIL + FADE-IN SCRIPT ================= -->
 <script>
@@ -91,4 +91,5 @@ if (greenSection) {
   faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
   
+
 
