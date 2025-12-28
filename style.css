@@ -207,12 +207,12 @@ header.scrolled a {
 }
 
 .project img {
-   width: 100%;
-  height: 200px;           /* shorter / more square */
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* perfect square */
   object-fit: cover;
-  border-radius: 18px;     /* beveled corners */
-  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 18px;       /* beveled corners */
   display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .project:hover img {
@@ -329,20 +329,17 @@ footer {
 .work-item {
   position: relative;
   width: 100%;
-  padding-top: 80%;          /* makes the container more square-like (height adjusts to width) */
+  aspect-ratio: 1 / 1;      /* perfect square */
   border-radius: 18px;       /* beveled corners */
-  overflow: hidden;          /* ensures children stay inside bevel */
+  overflow: hidden;          /* clip children */
   cursor: pointer;
 }
 
 .work-item img {
-  position: absolute;        /* fill the container exactly */
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: inherit;    /* match the parent bevel */
+  border-radius: inherit;    /* match parent bevel */
   display: block;
   transition:
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
@@ -403,6 +400,7 @@ footer {
 .modal-close:hover {
   opacity: 1;
 }
+
 
 
 
