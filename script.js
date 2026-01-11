@@ -81,3 +81,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const closeBtn = document.querySelector('.modal-close');
+
+// Select all images in BOTH work sections
+const allImages = document.querySelectorAll('.project img, .work-item img');
+
+allImages.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.classList.add('active');
+    modalImg.src = img.src;
+  });
+});
+
+// Close modal when X is clicked
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+// Close modal when clicking anywhere outside the image
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+  }
+});
