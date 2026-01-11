@@ -164,7 +164,8 @@ header.scrolled {
 
 .project img {
   width: 100%;
-  aspect-ratio: 1 / 1;      /* FIX: Forces perfect square *   /* FIX: Crops image to fill square */
+  height: 100%;
+  object-fit: cover;
   border-radius: 18px;
   display: block;
   transition: transform 0.5s ease, filter 0.5s ease;
@@ -279,4 +280,5 @@ footer { text-align: center; padding: 40px; color: #666; }
 @media (max-width: 768px) {
   header h1.logo { font-size: 2rem; gap: 10px; }
 }
+
 
