@@ -13,6 +13,11 @@ body {
   line-height: 1.6;
 }
 
+/* ================= TEXT JUSTIFY ================= */
+p {
+  text-align: justify;
+}
+
 /* ================= HEADER / NAVBAR ================= */
 header {
   font-family: 'Playfair Display', serif;
@@ -281,6 +286,7 @@ footer { text-align: center; padding: 40px; color: #666; }
 @media (max-width: 768px) {
   header h1.logo { font-size: 2rem; gap: 10px; }
 }
+
 
 
 
