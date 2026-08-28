@@ -11,15 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Messy ambient multi-layered radial gradient background */
+/* Messy ambient multi-layered divine radial gradient background (slightly brighter) */
 body {
   background-color: #0f0f0f;
   background-image: 
-    radial-gradient(at 15% 20%, rgba(204, 241, 255, 0.04) 0px, transparent 45%),
-    radial-gradient(at 85% 15%, rgba(0, 255, 136, 0.03) 0px, transparent 50%),
-    radial-gradient(at 75% 65%, rgba(138, 43, 226, 0.035) 0px, transparent 45%),
-    radial-gradient(at 25% 80%, rgba(0, 255, 136, 0.025) 0px, transparent 55%),
-    radial-gradient(at 50% 45%, rgba(204, 241, 255, 0.03) 0px, transparent 50%);
+    radial-gradient(at 15% 20%, rgba(204, 241, 255, 0.08) 0px, transparent 45%),
+    radial-gradient(at 85% 15%, rgba(0, 255, 136, 0.07) 0px, transparent 50%),
+    radial-gradient(at 75% 65%, rgba(138, 43, 226, 0.08) 0px, transparent 45%),
+    radial-gradient(at 25% 80%, rgba(0, 255, 136, 0.06) 0px, transparent 55%),
+    radial-gradient(at 50% 45%, rgba(204, 241, 255, 0.07) 0px, transparent 50%);
   background-attachment: fixed;
   color: #ffffff;
   line-height: 1.6;
@@ -96,7 +96,7 @@ header.scrolled {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* ================= HERO (Excluded from divine gradient) ================= */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 100vh;
@@ -107,7 +107,7 @@ header.scrolled {
   align-items: center;
   text-align: center;
   overflow: hidden; 
-  background: #0f0f0f; /* Overrides body background so divine gradient does not show */
+  background: transparent; /* Allows body divine gradient through */
 }
 
 .hero h2 { font-size: 3.8rem; font-weight: 600; }
@@ -228,7 +228,7 @@ header.scrolled {
 .contact {
   text-align: center;
   padding: 140px 60px;
-  background: linear-gradient(180deg, rgba(15, 15, 15, 0.4) 0%, rgba(20, 20, 20, 0.7) 100%);
+  background: transparent; /* Allows divine gradient through */
 }
 
 .contact h3 { font-size: 2.45rem; margin-bottom: 15px; }
@@ -242,6 +242,8 @@ header.scrolled {
   color: #fff;
   text-decoration: none;
   font-size: 1.05rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
   transition: all 0.4s ease;
 }
 
