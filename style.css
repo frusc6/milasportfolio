@@ -11,15 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Messy ambient multi-layered divine radial gradient background (slightly brighter) */
+/* Brighter Divine Gradient (Ethereal White, Green & Blue) */
 body {
-  background-color: #0f0f0f;
+  background-color: #0b0f14;
   background-image: 
-    radial-gradient(at 15% 20%, rgba(204, 241, 255, 0.08) 0px, transparent 45%),
-    radial-gradient(at 85% 15%, rgba(0, 255, 136, 0.07) 0px, transparent 50%),
-    radial-gradient(at 75% 65%, rgba(138, 43, 226, 0.08) 0px, transparent 45%),
-    radial-gradient(at 25% 80%, rgba(0, 255, 136, 0.06) 0px, transparent 55%),
-    radial-gradient(at 50% 45%, rgba(204, 241, 255, 0.07) 0px, transparent 50%);
+    radial-gradient(at 10% 15%, rgba(255, 255, 255, 0.12) 0px, transparent 40%),
+    radial-gradient(at 85% 20%, rgba(0, 255, 136, 0.12) 0px, transparent 45%),
+    radial-gradient(at 70% 65%, rgba(0, 180, 255, 0.14) 0px, transparent 50%),
+    radial-gradient(at 20% 80%, rgba(0, 255, 170, 0.10) 0px, transparent 50%),
+    radial-gradient(at 50% 45%, rgba(200, 240, 255, 0.10) 0px, transparent 45%);
   background-attachment: fixed;
   color: #ffffff;
   line-height: 1.6;
@@ -36,11 +36,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(25, 25, 25, 0.95);
+  background: rgba(15, 20, 25, 0.85);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 100;
   transition: background 0.4s ease, color 0.3s ease;
 }
@@ -61,7 +61,7 @@ header h1.logo {
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   color: #ccf1ff;
-  text-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+  text-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
   margin-top: 8px;
 }
 
@@ -91,7 +91,7 @@ header a:hover::after { width: 100%; }
 header a:hover { color: #00ff88; }
 
 header.scrolled {
-  background: rgba(20, 20, 20, 0.95);
+  background: rgba(10, 15, 20, 0.95);
   backdrop-filter: blur(15px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
@@ -107,11 +107,11 @@ header.scrolled {
   align-items: center;
   text-align: center;
   overflow: hidden; 
-  background: transparent; /* Allows body divine gradient through */
+  background: transparent;
 }
 
 .hero h2 { font-size: 3.8rem; font-weight: 600; }
-.hero p { color: #aaa; margin-top: 10px; font-size: 1.15rem; }
+.hero p { color: #ccc; margin-top: 10px; font-size: 1.15rem; }
 
 .hero-bg {
   position: absolute;
@@ -146,7 +146,7 @@ header.scrolled {
   left: 0;
   width: 100%;
   height: 140px;
-  background: rgba(25, 25, 25, 0.8);
+  background: rgba(15, 20, 25, 0.7);
   filter: blur(30px);
   z-index: 0;
   pointer-events: none;
@@ -159,7 +159,7 @@ header.scrolled {
   display: block;
   width: 60px;
   height: 1px;
-  background: #333;
+  background: rgba(255, 255, 255, 0.15);
   margin: 0 auto 60px;
 }
 
@@ -167,8 +167,8 @@ header.scrolled {
 .experience-list { max-width: 800px; margin: 0 auto; text-align: left; }
 .experience-item { margin-bottom: 50px; }
 .experience-item h4 { font-size: 1.45rem; font-weight: 600; margin-bottom: 6px; }
-.experience-meta { display: block; font-size: 1rem; color: #777; margin-bottom: 12px; }
-.experience-item p { color: #aaa; line-height: 1.7; text-align: justify; font-size: 1.05rem; }
+.experience-meta { display: block; font-size: 1rem; color: #88a; margin-bottom: 12px; }
+.experience-item p { color: #ccc; line-height: 1.7; text-align: justify; font-size: 1.05rem; }
 
 /* PROJECTS GRID FIX */
 .projects {
@@ -228,21 +228,21 @@ header.scrolled {
 .contact {
   text-align: center;
   padding: 140px 60px;
-  background: transparent; /* Allows divine gradient through */
+  background: transparent;
 }
 
 .contact h3 { font-size: 2.45rem; margin-bottom: 15px; }
-.contact-text { color: #aaa; margin-bottom: 40px; font-size: 1.2rem; }
+.contact-text { color: #ccc; margin-bottom: 40px; font-size: 1.2rem; }
 
 .contact-button {
   display: inline-block;
   padding: 14px 36px;
   border-radius: 50px;
-  border: 1px solid #444;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   text-decoration: none;
   font-size: 1.05rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
   transition: all 0.4s ease;
 }
@@ -250,7 +250,7 @@ header.scrolled {
 .contact-button:hover { background: #fff; color: #000; transform: translateY(-3px); }
 
 /* FOOTER */
-footer { text-align: center; padding: 40px; color: #666; font-size: 0.95rem; }
+footer { text-align: center; padding: 40px; color: #888; font-size: 0.95rem; }
 
 /* MODAL styles */
 .modal {
